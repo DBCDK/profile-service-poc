@@ -1,0 +1,20 @@
+{
+    "appName": "ProfileService",
+    "hazelcast": {
+        "clusterName": "profile-service-${SCOPE}",
+        "cacheConfig": {
+            "*": {
+                "timeout": "1",
+                "timeUnit": "Minutes"
+            },
+            "oaProfile": {
+                "timeout": "60",
+                "timeUnit": "Minutes"
+            },
+            "oaProfileError": {
+                "timeout": "60",
+                "timeUnit": "Minutes"
+            }
+        }
+    }
+}
