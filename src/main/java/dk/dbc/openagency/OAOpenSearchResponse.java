@@ -25,9 +25,9 @@ import java.util.List;
  *
  * @author DBC {@literal <dbc.dk>}
  */
+@SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
 public class OAOpenSearchResponse {
 
-    @SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
     public List<OAProfile> profile;
 
     @Override

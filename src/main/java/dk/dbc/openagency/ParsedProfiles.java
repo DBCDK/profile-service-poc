@@ -18,6 +18,7 @@
  */
 package dk.dbc.openagency;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
@@ -29,6 +30,7 @@ import java.util.stream.Stream;
  *
  * @author Morten Bøgeskov (mb@dbc.dk)
  */
+@SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
 public class ParsedProfiles implements Serializable {
 
     private static final long serialVersionUID = -3527064622411416196L;
@@ -66,6 +68,7 @@ public class ParsedProfiles implements Serializable {
         return true;
     }
 
+    @SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
     public static class Profile implements Serializable {
 
         private static final long serialVersionUID = 9173310341499192210L;
@@ -85,9 +88,9 @@ public class ParsedProfiles implements Serializable {
                     .sorted()
                     .collect(Collectors.toList());
             relation = Stream.concat(search.stream(),
-                                      profile.source.stream()
-                                              .filter(source -> source.relation != null && !source.relation.isEmpty())
-                                              .map(source -> source.sourceIdentifier))
+                                     profile.source.stream()
+                                             .filter(source -> source.relation != null && !source.relation.isEmpty())
+                                             .map(source -> source.sourceIdentifier))
                     .collect(Collectors.toSet()) // UNIQ
                     .stream()
                     .sorted()

@@ -20,11 +20,11 @@ package dk.dbc.profile.service;
 
 import dk.dbc.openagency.ParsedProfiles;
 import dk.dbc.openagency.ProfileBean;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.io.IOException;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
-import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -86,6 +86,7 @@ public class Profile {
         }
     }
 
+    @SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
     public static class Resp {
 
         public boolean ok;

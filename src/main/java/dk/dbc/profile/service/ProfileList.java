@@ -18,6 +18,7 @@
  */
 package dk.dbc.profile.service;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -61,6 +62,7 @@ public class ProfileList {
         return new Resp(profiles);
     }
 
+    @SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
     public static class Resp {
 
         public boolean ok;

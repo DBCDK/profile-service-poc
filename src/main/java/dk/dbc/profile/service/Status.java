@@ -18,23 +18,16 @@
  */
 package dk.dbc.profile.service;
 
-import com.hazelcast.cache.ICache;
-import com.hazelcast.cache.impl.HazelcastServerCacheManager;
 import dk.dbc.openagency.ProfileBean;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
-import javax.cache.Cache;
-import javax.cache.CacheManager;
-import javax.cache.Caching;
-import javax.cache.spi.CachingProvider;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,7 +41,8 @@ public class Status {
 
     private static final Logger log = LoggerFactory.getLogger(Status.class);
 
-    @EJB ProfileBean profileBean;
+    @EJB
+    ProfileBean profileBean;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -65,6 +59,7 @@ public class Status {
         return Resp.OK;
     }
 
+    @SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
     public static class Resp {
 
         private static final Resp OK = new Resp();

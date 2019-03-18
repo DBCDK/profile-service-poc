@@ -25,12 +25,10 @@ import java.util.List;
  *
  * @author DBC {@literal <dbc.dk>}
  */
+@SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
 public class OAProfile {
 
-    @SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
     public String profileName;
-
-    @SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
     public List<OASource> source;
 
     @Override

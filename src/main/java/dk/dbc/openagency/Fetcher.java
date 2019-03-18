@@ -18,7 +18,6 @@
  */
 package dk.dbc.openagency;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import javax.annotation.PostConstruct;
@@ -30,10 +29,6 @@ import javax.inject.Inject;
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.ServerErrorException;
 import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.ClientRequestContext;
-import javax.ws.rs.client.ClientRequestFilter;
-import javax.ws.rs.core.Feature;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriBuilder;
 import org.slf4j.Logger;

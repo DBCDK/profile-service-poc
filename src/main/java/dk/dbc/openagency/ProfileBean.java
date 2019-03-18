@@ -68,9 +68,9 @@ public class ProfileBean {
     @CacheRemoveAll(cacheName = "oaProfile")
     public void evict() {
     }
+
     @CacheRemoveAll(cacheName = "oaProfileError")
     public void evictError() {
     }
-
 
 }
