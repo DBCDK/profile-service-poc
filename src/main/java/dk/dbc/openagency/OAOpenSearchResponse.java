@@ -18,6 +18,7 @@
  */
 package dk.dbc.openagency;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.util.List;
 
 /**
@@ -26,6 +27,7 @@ import java.util.List;
  */
 public class OAOpenSearchResponse {
 
+    @SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
     public List<OAProfile> profile;
 
     @Override

@@ -23,6 +23,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.io.IOException;
 import java.util.Locale;
 
@@ -38,6 +39,7 @@ public class BadgerFishDeserializerBoolean extends StdDeserializer<Boolean> {
         super(String.class);
     }
 
+    @SuppressFBWarnings(value = {"NP_BOOLEAN_RETURN_NULL"})
     @Override
     public Boolean deserialize(JsonParser parser, DeserializationContext context) throws IOException, JsonProcessingException {
 
