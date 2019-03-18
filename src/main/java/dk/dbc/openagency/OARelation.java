@@ -18,10 +18,13 @@
  */
 package dk.dbc.openagency;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 /**
  *
  * @author DBC {@literal <dbc.dk>}
  */
+@SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
 public class OARelation {
 
     public String rdfLabel;
