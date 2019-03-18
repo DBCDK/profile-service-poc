@@ -62,7 +62,7 @@ public class ProfileList {
         return new Resp(profiles);
     }
 
-    @SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
+    @SuppressFBWarnings(value = {"URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD"})
     public static class Resp {
 
         public boolean ok;

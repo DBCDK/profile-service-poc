@@ -59,7 +59,7 @@ public class Status {
         return Resp.OK;
     }
 
-    @SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
+    @SuppressFBWarnings(value = {"URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD"})
     public static class Resp {
 
         private static final Resp OK = new Resp();

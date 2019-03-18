@@ -30,7 +30,7 @@ import java.util.stream.Stream;
  *
  * @author Morten Bøgeskov (mb@dbc.dk)
  */
-@SuppressFBWarnings(value = {"UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
+@SuppressFBWarnings(value = {"NP_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD"})
 public class ParsedProfiles implements Serializable {
 
     private static final long serialVersionUID = -3527064622411416196L;
